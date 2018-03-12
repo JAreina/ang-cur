@@ -1,18 +1,19 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
 import { UnoComponent } from './componentes/uno/uno.component';
 import { NuevoComponent } from './componentes/nuevo_componente/nuevo.component';
-import { FormsModule } from '@angular/forms';
+import { ClientesComponent } from './componentes/clientes/clientes.component';
 
 @NgModule({
   declarations: [ // las clases que creamos
     AppComponent,
     UnoComponent,
-    NuevoComponent
+    NuevoComponent,
+    ClientesComponent
   ],
   imports: [ // clases predefinidas de angular
     BrowserModule,

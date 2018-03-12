@@ -1,0 +1,9 @@
+
+CREAR COMPONENTES 
+
+*****************
+
+ng generate component --prefix juan --spec false /componentes/clientes
+
+
+
