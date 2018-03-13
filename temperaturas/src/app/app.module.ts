@@ -1,18 +1,21 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-
+import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { TemperaturasComponent } from './vistas/temperaturas/temperaturas.component';
+import { NgifComponent } from './componentes/ngif/ngif.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    TemperaturasComponent
+    TemperaturasComponent,
+    NgifComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

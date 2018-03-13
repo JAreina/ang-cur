@@ -16,6 +16,7 @@ export class TemperaturasComponent implements OnInit {
 
        titulo = '';
 
+
   constructor() {
   }
   ngOnInit() {
