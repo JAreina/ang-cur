@@ -3,8 +3,23 @@
 <div class="container">
   <h1> {{saludo}} </h1>
   <app-uno></app-uno>
-</div>
+
 
 <label>ESCRIBE TU TÍTULO</label>
 <input type="text" [(ngModel)]="saludo">
+</div>
+
+
+<div class="container">
+  <h1>data-binding</h1>
+       <h2>INTERPOLACION</h2>
+  <p>{{interpolacion}}</p>
+
+  <h2>property binding </h2>
+        <p >datos de clase a vista one-way</p>
+  <img [src]="urlFoto" alt="foto">
+  <img src="{{urlFoto}}" alt="foto">
+   <h2>event binding</h2>
+
+</div>
 

@@ -1,5 +1,13 @@
 div.container{
     background-color: rgb(24, 23, 23);
     color:#ffff;
-    font-size: 6em;
+    font-size: 1.2em;
+}
+
+img{
+    width:200px;
+}
+
+h2{
+    border-bottom: 1px solid white;
 }

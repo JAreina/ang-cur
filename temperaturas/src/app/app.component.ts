@@ -6,18 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  saludo = '';
-  interpolacion = 'esto es interpolacion {{propiedad}}';
-  urlFoto = '../../assets/img/foto.jpg';
-
-
-
-  
+  title = 'app';
 }
-
-
-
-
-
-
-

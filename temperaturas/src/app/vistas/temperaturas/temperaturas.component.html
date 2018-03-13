@@ -1,0 +1,13 @@
+
+<h1>{{titulo}}</h1>
+
+<div *ngFor="let t of arrTemp">
+  <p>Código Postal : {{t.id}}</p>
+  <p>Año : {{t.anio}}</p>
+  <p>Grados Centígrados : {{t.grados}}</p>
+  <p>Provincia : {{t.provincia}}</p>
+</div>
+
+<div>
+  <button (click)="metodo()">click</button>
+</div>
