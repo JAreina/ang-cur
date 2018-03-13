@@ -7,6 +7,7 @@ import { TemperaturasComponent } from './vistas/temperaturas/temperaturas.compon
 import { NgifComponent } from './componentes/ngif/ngif.component';
 import { NgforComponent } from './componentes/ngfor/ngfor.component';
 import { NgStyleComponent } from './componentes/ng-style/ng-style.component';
+import { NgClassComponent } from './componentes/ng-class/ng-class.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { NgStyleComponent } from './componentes/ng-style/ng-style.component';
     TemperaturasComponent,
     NgifComponent,
     NgforComponent,
-    NgStyleComponent
+    NgStyleComponent,
+    NgClassComponent
   ],
   imports: [
     BrowserModule,
