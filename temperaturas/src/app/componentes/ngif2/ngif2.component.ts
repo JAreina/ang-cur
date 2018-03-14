@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ngif2.component.css']
 })
 export class Ngif2Component implements OnInit {
-  capital = '';
+   capital = '';
    respuesta = 'responda a la pregunta';
 
   constructor() {

@@ -10,6 +10,9 @@ import { NgStyleComponent } from './componentes/ng-style/ng-style.component';
 import { NgClassComponent } from './componentes/ng-class/ng-class.component';
 import { NgSwitchComponent } from './componentes/ng-switch/ng-switch.component';
 import { Ngif2Component } from './componentes/ngif2/ngif2.component';
+import { MiPipeComponent } from './componentes/mi-pipe/mi-pipe.component';
+import { SqrtPipe } from './componentes/mi-pipe/pipes/sqrt.pipe';
+import { EurosPipe } from './componentes/mi-pipe/pipes/euros.pipe';
 
 
 @NgModule({
@@ -21,7 +24,10 @@ import { Ngif2Component } from './componentes/ngif2/ngif2.component';
     NgforComponent,
     NgStyleComponent,
     NgClassComponent,
-    NgSwitchComponent
+    NgSwitchComponent,
+    MiPipeComponent,
+    SqrtPipe,
+    EurosPipe
   ],
   imports: [
     BrowserModule,
