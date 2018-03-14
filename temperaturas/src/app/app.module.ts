@@ -16,6 +16,7 @@ import { EurosPipe } from './componentes/mi-pipe/pipes/euros.pipe';
 import { GradosPipePipe } from './vistas/temperaturas/grados-pipe.pipe';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
