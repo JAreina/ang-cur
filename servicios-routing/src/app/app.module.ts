@@ -8,18 +8,20 @@ import { ProveedoresService } from './servicios/proveedores.service';
 import { ProveedoresComponent } from './proveedores/proveedores.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { MiServicioService } from './servicios/mi-servicio.service';
+import { NotFoundComponent } from './not-found/not-found/not-found.component';
 
 const routes: Routes = [
   { path: '', component: InicioComponent },
   { path: 'proveedores', component: ProveedoresComponent },
-  { path: '**', component: InicioComponent} /* Cambiar por 404 */
+  { path: '**', component: NotFoundComponent} /* Cambiar por 404 */
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     ProveedoresComponent,
-    InicioComponent
+    InicioComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
