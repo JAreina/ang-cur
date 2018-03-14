@@ -1,8 +1,7 @@
+
+<app-header *ngIf="mostrar"></app-header>
 <div class="container">
 
-    <nav *ngIf="mostrar">
-        <a routerLink="/">inicio</a>
-        <a routerLink="/proveedores">proveedores</a>
-    </nav>
+  
     <router-outlet></router-outlet>
 </div>

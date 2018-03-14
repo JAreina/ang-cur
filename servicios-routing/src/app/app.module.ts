@@ -9,6 +9,7 @@ import { ProveedoresComponent } from './proveedores/proveedores.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { MiServicioService } from './servicios/mi-servicio.service';
 import { NotFoundComponent } from './not-found/not-found/not-found.component';
+import { HeaderComponent } from './header/header.component';
 
 const routes: Routes = [
   { path: '', component: InicioComponent },
@@ -21,7 +22,8 @@ const routes: Routes = [
     AppComponent,
     ProveedoresComponent,
     InicioComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

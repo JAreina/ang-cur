@@ -32,6 +32,11 @@ export class NotFoundComponent implements OnInit {
             return this.contador;
      }
    }
+
+   ir() {
+    this.app.mostrar = true;
+    this.rutas.navigate(['']);
+   }
   ngOnInit() {
   }
 
