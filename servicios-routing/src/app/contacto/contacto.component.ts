@@ -26,13 +26,24 @@ export class ContactoComponent implements OnInit {
        dentro de la función de callback */
     this.ruta.params.forEach((params: Params) => {
         this.parametro = params['id'];
-        this.parametro2 = params['nombre'];
+        if (params['nombre']) {
+          this.parametro2 = params['nombre'];
+        }
     });
     console.log(this.ruta.params);
   }
 
   /* Redirijimos a través del método 'navigate' del router */
   redirect() {
-    this.router.navigate(['/contacto', this.parametro]);
+
+    if ( !this.parametro && !this.parametro2 ) {
+     console.log("NO HAY PARAMETROS EN LA URL");
+    }
+   
+    if ( this.parametro && this.parametro2 ) {
+      this.router.navigate(['/contacto', this.parametro, this.parametro2]);
+    } else if (this.parametro && !this.parametro2) {
+      this.router.navigate(['/contacto', this.parametro]);
+    }
   }
 }
