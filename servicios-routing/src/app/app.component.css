@@ -1,1 +1,11 @@
 /*css*/
+.container{
+    background-color:rgb(24, 0, 4);
+    color:rgb(211, 208, 189);
+}
+nav {
+    background-color: rgb(15, 2, 2);
+}
+nav a{
+    color:gainsboro;
+}

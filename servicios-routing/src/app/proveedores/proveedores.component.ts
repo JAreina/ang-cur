@@ -8,9 +8,10 @@ import { ProveedoresService } from '../servicios/proveedores.service';
 })
 export class ProveedoresComponent implements OnInit {
 
-  proveedores: any;
+  proveedores: any = [];
 
-  constructor(private proveedoresService: ProveedoresService) { }
+  constructor(private proveedoresService: ProveedoresService) {
+  }
 
   ngOnInit() {
     this.proveedores = this.proveedoresService.getProveedores();

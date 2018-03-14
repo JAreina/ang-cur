@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MiServicioService } from '../servicios/mi-servicio.service';
 
 @Component({
   selector: 'app-inicio',
@@ -7,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InicioComponent implements OnInit {
 
-  constructor() { }
+  constructor(private miServicio: MiServicioService) {
+
+        this.miServicio.diHola();
+   }
 
   ngOnInit() {
   }

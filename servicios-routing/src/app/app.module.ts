@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { ProveedoresService } from './servicios/proveedores.service';
 import { ProveedoresComponent } from './proveedores/proveedores.component';
 import { InicioComponent } from './inicio/inicio.component';
+import { MiServicioService } from './servicios/mi-servicio.service';
 
 const routes: Routes = [
   { path: '', component: InicioComponent },
@@ -24,7 +25,7 @@ const routes: Routes = [
     BrowserModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [ProveedoresService],
+  providers: [ProveedoresService, MiServicioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
