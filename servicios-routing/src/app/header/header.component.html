@@ -4,7 +4,7 @@
     aria-controls="containerNavbar" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
   </button>
-  <a class="navbar-brand" href="#">AZ</a>
+  <a class="navbar-brand" routerLink="/">AZ</a>
   <div class="collapse navbar-collapse" id="containerNavbar">
     <ul class="navbar-nav mr-auto w-100 justify-content-end">
       <!-- Directiva para aplicar estilo 'active' cuando sea la ruta activa -->
@@ -20,6 +20,9 @@
       </li>
       <li class="nav-item" routerLinkActive="active">
           <a class="nav-link" routerLink="/borrar">BORRAR</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/contacto">contacto</a>
       </li>
     </ul>
 </div>
