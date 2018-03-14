@@ -10,10 +10,12 @@ import { InicioComponent } from './inicio/inicio.component';
 import { MiServicioService } from './servicios/mi-servicio.service';
 import { NotFoundComponent } from './not-found/not-found/not-found.component';
 import { HeaderComponent } from './header/header.component';
+import { BorrarComponent } from './borrar/borrar.component';
 
 const routes: Routes = [
   { path: '', component: InicioComponent },
   { path: 'proveedores', component: ProveedoresComponent },
+  { path: 'borrar', component: BorrarComponent },
   { path: '**', component: NotFoundComponent} /* Cambiar por 404 */
 ];
 
@@ -23,7 +25,8 @@ const routes: Routes = [
     ProveedoresComponent,
     InicioComponent,
     NotFoundComponent,
-    HeaderComponent
+    HeaderComponent,
+    BorrarComponent
   ],
   imports: [
     BrowserModule,
