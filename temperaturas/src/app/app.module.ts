@@ -13,6 +13,7 @@ import { Ngif2Component } from './componentes/ngif2/ngif2.component';
 import { MiPipeComponent } from './componentes/mi-pipe/mi-pipe.component';
 import { SqrtPipe } from './componentes/mi-pipe/pipes/sqrt.pipe';
 import { EurosPipe } from './componentes/mi-pipe/pipes/euros.pipe';
+import { GradosPipePipe } from './vistas/temperaturas/grados-pipe.pipe';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { EurosPipe } from './componentes/mi-pipe/pipes/euros.pipe';
     NgSwitchComponent,
     MiPipeComponent,
     SqrtPipe,
-    EurosPipe
+    EurosPipe,
+    GradosPipePipe
   ],
   imports: [
     BrowserModule,

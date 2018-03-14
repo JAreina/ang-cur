@@ -1,1 +1,12 @@
 /*css */
+
+#pipe{
+    background-color: rgb(37, 35, 35);
+    color: white;
+    
+}
+
+#pipe >div {
+    margin-left: 30px;
+    padding: 10px;
+}
