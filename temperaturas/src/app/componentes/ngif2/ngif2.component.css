@@ -1,0 +1,7 @@
+.mostrar{
+    display:block;
+}
+
+#correcto,#incorrecto{
+    display:none;
+}

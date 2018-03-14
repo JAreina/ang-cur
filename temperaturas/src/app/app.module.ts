@@ -9,6 +9,7 @@ import { NgforComponent } from './componentes/ngfor/ngfor.component';
 import { NgStyleComponent } from './componentes/ng-style/ng-style.component';
 import { NgClassComponent } from './componentes/ng-class/ng-class.component';
 import { NgSwitchComponent } from './componentes/ng-switch/ng-switch.component';
+import { Ngif2Component } from './componentes/ngif2/ngif2.component';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { NgSwitchComponent } from './componentes/ng-switch/ng-switch.component';
     AppComponent,
     TemperaturasComponent,
     NgifComponent,
+    Ngif2Component,
     NgforComponent,
     NgStyleComponent,
     NgClassComponent,
