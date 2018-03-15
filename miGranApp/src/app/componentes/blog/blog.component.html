@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1>Empezar un blog</h1>
+    </div>
+  </div>
+</div>
+
+<form (ngSubmit)="enviarForm()" #formpro="ngForm">
+
+    <div class="form-group">
+        <label>Título del blog</label>
+        <span class="glyphicon glyphicon-asterisk"
+             *ngIf="titulo.valid"></span>
+             <span class="glyphicon glyphicon-asterisk"
+             *ngIf="titulo.invalid && titulo.touched"></span>
+        <input type="text" 
+               class="form-control"
+               id="titulo"
+               name="titulo" 
+               ngModel
+               required
+               #titulo="ngModel">
+        <p class="alert alert-danger" *ngIf="titulo.invalid && titulo.touched">
+          El campo título es obligatorio.
+        </p>
+      </div>
+      <button type="submit" 
+      class="btn btn-success"
+      [disabled]="!formpro.valid"
+      >Crear titulo</button>
+  </form>

@@ -1,0 +1,56 @@
+
+<div class="container">
+  <div class="row">
+    <h2>CREAR TU CUENTA EN DOS SEGUNDOS</h2>
+  </div>
+</div>
+
+
+<form [formGroup]="usuarioForm" (ngSubmit)="registrar()">
+  <div class="form-group">
+    <label for="nombre">Tu nombre en BBlooggss</label>
+    <input type="text" 
+           class="form-control"
+           id="nombre"
+           formControlName="nombre"> 
+
+           <div [hidden]="usuarioForm.valid">
+            <div >
+              El nombre debe estar entre 3 y 5 caracteres 
+          </div> 
+        </div>
+     <!-- Enlazamos cada campo del formulario mediante 'formControlName' -->
+     <label for="correo">Correo electrónico</label>
+    <input type="email" 
+           class="form-control"
+           id="correo"
+           formControlName="correo"> 
+
+     <div [hidden]="usuarioForm.valid">
+      <div *ngIf = "!usuarioForm.pristine && correo.errors?.email">
+        Email no válido.
+    </div> 
+
+     </div>
+           
+        
+           <label for="Provincia">Provincia</label>
+           <select class="form-control" 
+                  id="provincia"
+              
+                  
+                  formControlName="provincia">
+                  <option value="">Seleccione la provincia</option> 
+                  <option *ngFor="let provincia of provincias"
+                  [value]="provincia">{{provincia}} </option> 
+          </select>
+  </div>
+
+  <button class="btn btn-primary"
+  type="submit">OK</button>
+  </form>
+  
+<div>{{usuario | json}}</div>
+
+
+<p>Form status: {{ usuarioForm.status | json }}</p>

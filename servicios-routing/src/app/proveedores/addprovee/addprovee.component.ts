@@ -10,7 +10,6 @@ import { NgForm } from '@angular/forms';
 export class AddproveeComponent implements OnInit {
 
   @ViewChild('formpro') formpro: NgForm;
-  
   proveedor: any;
 
   total: number = 0;
@@ -54,7 +53,7 @@ export class AddproveeComponent implements OnInit {
     this.proveedor.email = this.formpro.value.email;
     this.proveedor.contacto = this.formpro.value.contacto;
 
-    this.formpro.reset();  
+    this.formpro.reset();
   }
 
 }
