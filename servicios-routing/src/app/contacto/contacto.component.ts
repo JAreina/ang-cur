@@ -37,9 +37,8 @@ export class ContactoComponent implements OnInit {
   redirect() {
 
     if ( !this.parametro && !this.parametro2 ) {
-     console.log("NO HAY PARAMETROS EN LA URL");
+     console.log('NO HAY PARAMETROS EN LA URL');
     }
-   
     if ( this.parametro && this.parametro2 ) {
       this.router.navigate(['/contacto', this.parametro, this.parametro2]);
     } else if (this.parametro && !this.parametro2) {
