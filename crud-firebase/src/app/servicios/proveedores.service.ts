@@ -1,9 +1,14 @@
 import { Injectable } from '@angular/core';
+import { Http, Headers } from '@angular/http';
 
 @Injectable()
 export class ProveedoresService {
 
-  proveedores: any = [
+  prosURL = 'https://presu-f23d5.firebaseio.com/prov.json';
+  proURL = 'https://presu-f23d5.firebaseio.com/prov';
+  proveedores: any = [];
+
+  /*[
     {
       nombre: 'Telefónica',
       cif: 'B12345678',
@@ -26,11 +31,25 @@ export class ProveedoresService {
       email: 'info@iberdrola.com',
       contacto: 'Laura Martínez'
     }
-  ];
+  ];*/
 
-  constructor() { }
+  constructor(private _http: Http) { }
 
-  getProveedores() {
+
+  guardarProveedor(proveedor: any) {
+       const nuevo = JSON.stringify(proveedor);
+       const headers = new Headers({
+        'Content-Type': 'application/json'
+       });
+
+       return this._http.post(this.prosURL, nuevo, {headers})
+       .map( res => {
+        console.log(res.json());
+        return res.json();
+      });
+  }
+
+  getProveedores () {
     return this.proveedores;
   }
 

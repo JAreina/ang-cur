@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { ProveedoresService } from '../../servicios/proveedores.service';
 
 @Component({
   selector: 'app-addprovee',
@@ -19,7 +20,7 @@ export class AddproveeComponent implements OnInit {
      'Tarragona','Santa Cruz de Tenerife','Teruel','Toledo','Valencia','Valladolid','Vizcaya',
      'Zamora','Zaragoza' ]
 
-  constructor() {
+  constructor(private provService: ProveedoresService) {
     this.proveedor = {
       nombre: '',
       cif: '',
@@ -46,6 +47,11 @@ export class AddproveeComponent implements OnInit {
     this.proveedor.telefono = this.formpro.value.telefono;
     this.proveedor.email = this.formpro.value.email;
     this.proveedor.contacto = this.formpro.value.contacto;
+
+      this.provService.guardarProveedor(this.proveedor)
+           .subscribe(res => {
+              console.log(res);
+           });
 
     this.formpro.reset();
   }
