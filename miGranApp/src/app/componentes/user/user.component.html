@@ -54,3 +54,16 @@
 
 
 <p>Form status: {{ usuarioForm.status | json }}</p>
+
+
+  
+
+<div class="container" *ngIf="usuarios">
+  <div class="row">
+    <h2>TODOS LOS USUARIOS </h2>
+    <ul >
+         <li *ngFor = "let u of usuarios">{{u.nombre}} -- {{u.correo}} -- {{u.provincia}}</li>
+    </ul>
+  </div>
+</div>
+  

@@ -23,4 +23,11 @@ usuarios: any[];
         localStorage.setItem('usuariosArray' , jsonn);
   }
 
+  recuperarUsuarios(): any {
+           const arr = localStorage.getItem('usuariosArray');
+        this.usuarios = JSON.parse(arr);
+        console.log(this.usuarios);
+      return this.usuarios;
+      }
+
 }

@@ -12,6 +12,7 @@ export class UserComponent implements OnInit {
 
   usuarioForm: FormGroup;
   usuario: any;
+  usuarios:any[] = [];
 
   provincias: string[] = [ 'Álava', 'Albacete', 'Alicante', 'Almería', 'Asturias', 'Ávila', 'Badajoz',
      'Barcelona', 'Burgos', 'Cáceres', 'Cádiz', 'Cantabria', 'Castellón', 'Ciudad Real', 'Córdoba',
@@ -24,6 +25,7 @@ export class UserComponent implements OnInit {
      
   constructor(private pf: FormBuilder, private usuarioService: UsuariosService) {
     this.crearFormulario();
+    this.recuperarUsuarios();
   }
 
   ngOnInit() {
@@ -69,6 +71,10 @@ export class UserComponent implements OnInit {
 
    reset() {
 
+   }
+
+   recuperarUsuarios() {
+     this.usuarios =   this.usuarioService.recuperarUsuarios();
    }
 
 }
