@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Headers, Http, Response } from '@angular/http';
+import { Headers, Http, Response, RequestOptions } from '@angular/http';
+// tslint:disable-next-line:import-blacklist
 import 'rxjs/Rx'; // to communicate with the web service
 
 @Injectable()
@@ -7,7 +8,7 @@ export class PresupuestosService {
 
   // URL de la BD de Firebase y a la tabla/colección de presupuestos en formato JSON
   presURL = 'https://presu-f23d5.firebaseio.com/presupuestos.json';
-  preURL = 'https://presu-f23d5.firebaseio.com/';
+  preURL = 'https://presu-f23d5.firebaseio.com/presupuestos';
 
   constructor(private http: Http) { }
 
@@ -24,7 +25,7 @@ export class PresupuestosService {
       .map( res => {
         console.log(res.json());
         return res.json();
-      })
+      });
   }
 
   getPresupuestos() {
@@ -40,7 +41,7 @@ export class PresupuestosService {
         .map( res => res.json());
   }
 
-  putPresupuesto(presupuesto: any, id$: string){
+  putPresupuesto(presupuesto: any, id$: string) {
     const newpre = JSON.stringify(presupuesto);
     const headers = new Headers({
       'Content-Type': 'application/json'
@@ -52,14 +53,20 @@ export class PresupuestosService {
         .map ( res => {
           console.log(res.json());
           return res.json();
-        })
+        });
 
   }
 
   delPresupuesto ( id$: string) {
+    console.log(id$);
     const url = `${this.preURL}/${id$}.json`;
+
+
     return this.http.delete( url )
-        .map ( res => res.json() );
+        .map ( res => {
+          console.log(res.json());
+         res.json();
+        });
   }
 
 }

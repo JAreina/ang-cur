@@ -42,13 +42,17 @@ export class AddpresComponent implements OnInit {
     });
   }
 
- onSubmit(){
+ onSubmit() {
     // Salvamos valores del formulario
     this.presupuesto = this.savePresupuesto();
    /* */   this.presupuestoService.postPresupuesto(this.presupuesto)
-           .subscribe(newpres => {
+           .subscribe(bien => {
+                  console.log(bien);
+           },
+          (error) => {
 
-           })
+          }
+          );
     this.presupuestoForm.reset();
   }
 

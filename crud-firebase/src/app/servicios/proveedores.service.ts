@@ -26,7 +26,7 @@ export class ProveedoresService {
       email: 'info@iberdrola.com',
       contacto: 'Laura Martínez'
     }
-  ]
+  ];
 
   constructor() { }
 
