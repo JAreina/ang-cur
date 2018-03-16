@@ -1,12 +1,12 @@
 
-<div class="container">
+<div class="container titulo">
   <div class="row">
     <h2>CREAR TU CUENTA EN DOS SEGUNDOS</h2>
   </div>
 </div>
 
 
-<form [formGroup]="usuarioForm" (ngSubmit)="registrar()">
+<form [formGroup]="usuarioForm" (ngSubmit)="registrar()" class="col-sm-6">
   <div class="form-group">
     <label for="nombre">Tu nombre en BBlooggss</label>
     <input type="text" 
@@ -15,7 +15,7 @@
            formControlName="nombre"> 
 
            <div [hidden]="usuarioForm.valid">
-            <div >
+            <div *ngIf = "!usuarioForm.pristine || !nombre" class="rojo">
               El nombre debe estar entre 3 y 5 caracteres 
           </div> 
         </div>
@@ -27,7 +27,7 @@
            formControlName="correo"> 
 
      <div [hidden]="usuarioForm.valid">
-      <div *ngIf = "!usuarioForm.pristine && correo.errors?.email">
+      <div *ngIf = "!usuarioForm.pristine && correo.errors?.email" class="rojo">
         Email no válido.
     </div> 
 

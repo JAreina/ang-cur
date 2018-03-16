@@ -12,7 +12,7 @@ export class UserComponent implements OnInit {
 
   usuarioForm: FormGroup;
   usuario: any;
-  usuarios:any[] = [];
+  usuarios: any[] = [];
 
   provincias: string[] = [ 'Álava', 'Albacete', 'Alicante', 'Almería', 'Asturias', 'Ávila', 'Badajoz',
      'Barcelona', 'Burgos', 'Cáceres', 'Cádiz', 'Cantabria', 'Castellón', 'Ciudad Real', 'Córdoba',
@@ -22,7 +22,6 @@ export class UserComponent implements OnInit {
      'Tarragona', 'Santa Cruz de Tenerife', 'Teruel', 'Toledo', 'Valencia', 'Valladolid', 'Vizcaya',
      'Zamora', 'Zaragoza' ];
 
-     
   constructor(private pf: FormBuilder, private usuarioService: UsuariosService) {
     this.crearFormulario();
     this.recuperarUsuarios();
@@ -42,6 +41,7 @@ export class UserComponent implements OnInit {
 
    registrar() {
      this.usuario = this.crearUsuario();
+     this.resetea();
    }
 
  get nombre() {
@@ -69,8 +69,8 @@ export class UserComponent implements OnInit {
    }
 
 
-   reset() {
-
+   resetea() {
+            this.usuarioForm.reset();
    }
 
    recuperarUsuarios() {

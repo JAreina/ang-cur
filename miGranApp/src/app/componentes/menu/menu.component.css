@@ -1,4 +1,22 @@
-nav{
-    background-color:rgb(187, 187, 197);
-  
+
+
+
+div{
+    background-color:rgb(42, 42, 43);
+     min-height: 520px;
+     border-radius: 2px;
+}
+
+a.navbar-brand{
+    color:rgb(131, 131, 131);
+    font-size:1.9em;
+    transform: rotate(15deg);
+}
+
+li a.nav-link{
+    color:rgb(122, 122, 122);
+}
+
+li:hover a.nav-link{
+color:rgb(40, 77, 107);
 }
