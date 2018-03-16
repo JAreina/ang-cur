@@ -18,14 +18,17 @@ import { EditpresComponent } from './presupuestos/editpres/editpres.component';
 import { RegistroComponent } from './autenticacion/registro/registro.component';
 import { AutenticacionService } from './servicios/autenticacion.service';
 import { InicioSesionComponent } from './autenticacion/inicio-sesion/inicio-sesion.component';
+import { EditProvComponent } from './proveedores/editprov/editprov.component';
 
 const routes: Routes = [
   { path: '', component: InicioComponent },
   { path: 'proveedores', component: ProveedoresComponent },
   { path: 'addprovee', component: AddproveeComponent },
   { path: 'addpres', component: AddpresComponent },
+  
   { path: 'presupuestos', component: PresupuestosComponent },
   { path: 'editpres/:id', component: EditpresComponent },
+  { path: 'editproveedor/:id', component: EditProvComponent },
   { path: 'registro', component: RegistroComponent },
   { path: 'inicio-sesion', component: InicioSesionComponent },
   { path: '**', component: InicioComponent }
@@ -42,7 +45,8 @@ const routes: Routes = [
     PresupuestosComponent,
     EditpresComponent,
     RegistroComponent,
-    InicioSesionComponent
+    InicioSesionComponent,
+    EditProvComponent
   ],
   imports: [
     BrowserModule,

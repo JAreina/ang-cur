@@ -3,11 +3,11 @@ import { NgForm } from '@angular/forms';
 import { ProveedoresService } from '../../servicios/proveedores.service';
 
 @Component({
-  selector: 'app-addprovee',
-  templateUrl: './addprovee.component.html',
-  styleUrls: ['./addprovee.component.css']
+  selector: 'app-editprov',
+  templateUrl: './editprov.component.html',
+  styleUrls: ['./editprov.component.css']
 })
-export class AddproveeComponent implements OnInit {
+export class EditProvComponent implements OnInit {
 
   @ViewChild('formpro') formpro: NgForm;
   proveedor: any;

@@ -14,6 +14,14 @@
       <td>{{ proveedor.nombre }}</td>
       <td><a href="mailto:{{ proveedor.email }}">{{ proveedor.email }}</a></td>
       <td>{{ proveedor.telefono }}</td>
+      <td>
+        <button type="button" class="btn btn-success"
+                routerLink="/editproveedor/{{ proveedor.id$ }}"> Editar </button>
+      </td>
+      <td>
+      <button type="button" class="btn btn-danger"
+                (click)="eliminarProveedor(proveedor.id$)"> Eliminar </button>
+      </td>
     </tr>
   </tbody>
 </table>

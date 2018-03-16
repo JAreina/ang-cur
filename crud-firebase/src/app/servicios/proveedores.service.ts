@@ -50,7 +50,10 @@ export class ProveedoresService {
   }
 
   getProveedores () {
-    return this.proveedores;
+    return this._http.get( this.prosURL )
+    .map(
+      res => res.json()
+    );
   }
 
 }
